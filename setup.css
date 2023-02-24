@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../images/bg9.jpg");
+}
+.shell{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+.page{
+    transform: translateX(-110%);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: .5s;
+    background-size: cover;
+}
+.button{
+    display: block;
+    width: 10%;
+    color: #fff;
+    font-size: 30px;
+    border-bottom: #fff solid 4px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    margin: 50px;
+    left: calc(50% + (var(--i)*17%));
+    z-index: 999;
+    transition: .3s;
+}
+.page_content{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 50px;
+    color: #FFF;
+    position: absolute;
+    left: 100%;
+    display: none;
+    animation-name: fade;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+input{
+    display: none;
+}
+input:checked+.page{
+    transform: translateX(0px);
+    transition: .4s;
+}
+input:checked+.page .page_content{
+    width: 100%;
+    display: block;
+}
+.page:nth-child(3){
+    background-image: url('../images/map1.jpg');
+}
+.page:nth-child(3) .page_content{
+    background-color: rgb(146, 113, 155);
+}
+
+.page:nth-child(6){
+    background-image: url('../images/bq2.jpg');
+}
+.page:nth-child(6) .page_content{
+    background-color: rgb(173,170,226);
+}
+
+.page:nth-child(9){
+    background-image: url('../images/even.jpg');
+}
+.page:nth-child(9) .page_content{
+    background-color: rgb(154, 178, 221);
+}
+.page h1{
+    font-size: 60px;
+}
+.page p{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin: 30px 0;
+    text-indent: 2em;
+    line-height:180%;
+}
+.page span{
+    font-size: 18px;
+    
+    letter-spacing: 2px;
+    color: rgb(56, 56, 56);
+    
+}
+label:hover{
+    cursor: pointer;
+    border-bottom: solid 4px rgb(107, 105, 100);
+}
+nav {
+    width: 400px;
+    height: 50px;
+    background-color: rgba(93, 98, 121, 0.623);
+    position: fixed;
+    border-radius: 8px;
+    margin-top: -1.5cm;
+    margin-left: 7.6cm;
+}
+nav a {
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 16px;   
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    color: rgb(250, 250, 250);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+nav a:nth-child(1) {
+    width: 80px;
+}
+nav a:nth-child(2) {
+    width: 80px;
+}
+nav a:nth-child(3) {
+    width: 80px;
+}
+nav a:nth-child(4) {
+    width: 80px;
+}
+nav a:nth-child(5) {
+    width: 80px;
+}
+nav .animation {
+    position: absolute;
+    height: 100%;
+    background-color:rgb(98, 97, 165);
+    z-index: 9;
+    border-radius: 8px;
+    transition: all 0.3s;
+    left: 160px;
+}
+
+/* 这个地方控制背景色块的起始位置 */
+.start-home,
+nav a:nth-child(1):hover~.animation {
+    width: 80px;
+    left: 0px;
+}
+nav a:nth-child(2):hover~.animation {
+    width: 80px;
+    left: 80px;
+}
+nav a:nth-child(3):hover~.animation {
+    width: 80px;
+    left: 160px;
+}
+nav a:nth-child(4):hover~.animation {
+    width: 80px;
+    left: 240px;
+}
+nav a:nth-child(5):hover~.animation {
+    width: 80px;
+    left: 320px;
+}

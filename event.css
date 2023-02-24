@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    /* 需要隐藏最外层不可见区域以使视差生效 */
+    overflow: hidden;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    /* 3D的容器要允许overflow才能生效 */
+    overflow-y: auto;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+  }
+  
+  .list-item:hover .item-image::before {
+    background-color: rgba(0, 0, 0, 0.308);
+  }
+  
+  .item-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-50px) scale(2.4);
+    z-index: -1;
+  }
+  
+  .item-image::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.582);
+  }
+  
+  .item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item-text {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 4px 4px 2px rgb(10, 10, 10);   
+  }
+  
+  .item-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .item-desc {
+    text-indent: 2em;
+    font-size: 1.2rem;
+    margin-left: 3cm;
+    margin-right: 4cm;
+    line-height: 200%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+  }
+  
+  li {
+    float: left;
+    margin-left: 5cm;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    width: 120px;
+  }
+  .active {
+    background-color: #222020;
+    width: 120px;
+  }

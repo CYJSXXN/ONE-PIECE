@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../images/bg6.jpg");
+    overflow: hidden;
+}
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    filter: blur(4px);/*图片模糊程度*/
+}
+/* 修改 swiper插件样式 */
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+.swiper-slide-active{
+    filter: blur(0);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body {
+   
+    background-image: url("../images/bg6.jpg");
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    /* flex布局下元素不按比例缩放 */
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    margin: 20px;
+    background-image: url("../images/bg8.jpg");
+    /* background-color:rgba(235, 39, 39, 0.712); */
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex 子元素 纵向排列 */
+    flex-direction: column;
+    /* 增加个阴影 */
+    box-shadow: 0 0 30px #2c2c2c;
+    /* 同意给字体价格颜色 */
+    color: rgb(12, 11, 11)
+}
+.photo {
+    position: absolute;
+    /* 默认为放大 */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border-radius: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover .photo::before{
+    /* 缩小时隐藏 */
+    display: none;
+}
+.photo img {
+    /* 图片高宽均为100% */
+    /* 然后按照cover缩放，裁切长边 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover .photo {
+    /* 鼠标移上变小 */
+    width: 120px;
+    height: 120px;
+    top: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(8, 8, 8);
+}
+h1 {
+     margin-top: 5cm;
+}
+h2 {
+    margin-top: 15px;
+    width: 80%;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+}
+p {
+    width: 90%;
+    text-indent: 2em;
+    font-size: 16px;
+    line-height: 30px;
+}
+  nav {
+    width: 400px;
+    height: 40px;
+    background-color: rgb(93, 98, 121);
+    position: fixed;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 14cm;
+    margin-left: 15cm;
+}
+nav a {
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 16px;   
+    line-height: 40px;
+    width: 100px;
+    height: 50px;
+    color: rgb(255, 248, 239);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+nav a:nth-child(1) {
+    width: 80px;
+}
+nav a:nth-child(2) {
+    width: 80px;
+}
+nav a:nth-child(3) {
+    width: 80px;
+}
+nav a:nth-child(4) {
+    width: 80px;
+}
+nav a:nth-child(5) {
+    width: 80px;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    background-color:rgb(102, 78, 101);
+    z-index: 9;
+    border-radius: 8px;
+    transition: all 0.3s;
+    left: 240px;
+}
+.start-home,
+nav a:nth-child(1):hover~.animation {
+    width: 80px;
+    left: 0px;
+}
+nav a:nth-child(2):hover~.animation {
+    width: 80px;
+    left: 80px;
+}
+nav a:nth-child(3):hover~.animation {
+    width: 80px;
+    left: 160px;
+}
+nav a:nth-child(4):hover~.animation {
+    width: 80px;
+    left: 240px;
+}
+nav a:nth-child(5):hover~.animation {
+    width: 80px;
+    left: 320px;
+}
+

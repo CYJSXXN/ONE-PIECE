@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.shell{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+}
+.shell div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    letter-spacing: 2px;
+}
+.image{
+    transform: translateZ(-1px) scale(1.6);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+.text{
+    height: 50vh;
+    background-color: rgb(245, 245, 245);
+    background-image: url("../images/bg9.jpg");
+}
+.text h1{
+    font-size: 26px;
+    text-indent:2em;
+    margin-left: 4cm;
+    margin-right: 4cm;
+    line-height:200%;
+    font-family: 黑体;
+    
+    color: rgb(0, 0, 0);
+}
+.heading{
+    z-index: -1;
+    height: 100px;
+    font-family: 黑体;
+    background-color: rgba(8, 8, 8, 0.555);
+    transform: translateY(-28vh) translateZ(1px);
+    color: rgb(252, 252, 252);
+    font-size: 26px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+  }
+  
+  li {
+    float: left;
+    margin-left: 5cm;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  .active {
+    background-color: #4CAF50;
+  }
